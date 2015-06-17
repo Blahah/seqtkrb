@@ -1,4 +1,4 @@
-# seqtkrb [![Build Status](https://travis-ci.org/Blahah/seqtkrb.svg)](https://travis-ci.org/Blahah/seqtkrb)
+# seqtkrb [![Build Status](https://img.shields.io/travis/blahah/seqtkrb.svg)](https://travis-ci.org/Blahah/seqtkrb)
 
 seqtkrb is a ruby gem that wraps [seqtk](). This gives you fast access to basic operations on FASTA/FASTQ files without having to roll your own C extension or write a slow implementation in ruby.
 
