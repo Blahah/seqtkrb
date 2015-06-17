@@ -40,8 +40,7 @@ seq.sample('reads_l.fq', 'sampled_l.fq', 1_000, 1234) # sample 1,000 left reads 
 seq.sample('reads_r.fq', 'sampled_r.fq', 1_000, 1234) # sample the matching right reads
 
 # low memory sampling (uses two passes)
-seq.sample_lowmem('reads.fq', 1_000_000) # sample 1 million reads
-
+seq.sample_lowmem('reads.fq', 'sampled.fq', 1_000_000) # sample 1 million reads
 ```
 
 ## Contributing
