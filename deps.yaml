@@ -1,0 +1,10 @@
+seqtk:
+  binaries:
+    - seqtk
+  version:
+    number: 1.0-r82
+    command: seqtk
+  url:
+    64bit:
+      macosx: https://github.com/Blahah/seqtk/releases/download/1.0-r82/seqtk_1.0_osx.tar.gz
+      linux: https://github.com/Blahah/seqtk/releases/download/1.0-r82/seqtk_1.0_linux.tar.gz

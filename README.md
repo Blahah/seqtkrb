@@ -1,4 +1,4 @@
-# seqtkrb
+# seqtkrb [![Build Status](https://travis-ci.org/Blahah/seqtkrb.svg)](https://travis-ci.org/Blahah/seqtkrb)
 
 seqtkrb is a ruby gem that wraps [seqtk](). This gives you fast access to basic operations on FASTA/FASTQ files without having to roll your own C extension or write a slow implementation in ruby.
 
@@ -29,18 +29,18 @@ $ gem install seqtkrb
 ```ruby
 require 'seqtkrb'
 
-seqtk = SeqTK.new # will download and install seqtk if it is not found
+seq = Seqtkrb::Seqtk.new # will download and install seqtk if it is not found
 
 # basic sampling
-seqtk.sample('reads.fq', 10_000) # sample 10,000 reads
-seqtk.sample('reads.fq', 0.5) # sample reads with 50% chance of taking each read
+seq.sample('reads.fq', 'sampled.fq' 10_000) # sample 10,000 reads
+seq.sample('reads.fq', 'sampled.fq' 0.5) # sample reads with 50% chance of taking each read
 
 # sampling from paired files
-seqtk.sample('reads_l.fq', 1_000, 1234) # sample 1,000 left reads with seed 1234
-seqtk.sample('reads_r.fq', 1_000, 1234) # sample the matching right reads
+seq.sample('reads_l.fq', 'sampled_l.fq', 1_000, 1234) # sample 1,000 left reads with seed 1234
+seq.sample('reads_r.fq', 'sampled_r.fq', 1_000, 1234) # sample the matching right reads
 
 # low memory sampling (uses two passes)
-seqtk.sample_lowmem('reads.fq', 1_000_000) # sample 1 million reads
+seq.sample_lowmem('reads.fq', 1_000_000) # sample 1 million reads
 
 ```
 
